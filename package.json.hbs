@@ -1,0 +1,54 @@
+{
+  "name": "{{PKG_NAME}}",
+  "version": "{{PKG_VERSION}}",
+  "description": "{{PKG_DESC}}",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run prod",
+    "dev": "tsc -w",
+    "prod": "tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "files": [
+    "src",
+    "dist",
+    "index.js",
+    "package.json"
+  ],
+  "repository": {
+    "type": "{{REPO_TYPE}}",
+    "url": "{{REPO_TYPE}}+{{REPO_URL}}"
+  },
+  "keywords": [
+    "taro",
+    "plugins"
+  ],
+  "author": "lexmin0412",
+  "license": "ISC",
+  "bugs": {
+    "url": "{{REPO_URL}}/issues"
+  },
+  "homepage": "{{REPO_URL}}#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.8",
+    "jest": "^25.2.4",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.0",
+    "typescript": "4.8.2"
+  },
+  "dependencies": {
+    "@tarojs/helper": "{{TARO_VERSION}}",
+    "@tarojs/service": "{{TARO_VERSION}}",
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
+    "get-port": "^5.1.1",
+    "glob": "^7.1.6",
+    "http-proxy-middleware": "^1.0.3",
+    "path-to-regexp": "^6.1.0"
+  }
+}

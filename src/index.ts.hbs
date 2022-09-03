@@ -1,0 +1,14 @@
+export default (ctx: any) => {
+  const {
+    helper: {
+      chalk
+    }
+  } = ctx
+
+	ctx.onBuildStart(async () => {
+		console.log(chalk.yellow('插件 '), '{{PKG_NAME}}');
+		console.log(chalk.blueBright('结束 '), '')
+		console.log();
+	})
+
+}
